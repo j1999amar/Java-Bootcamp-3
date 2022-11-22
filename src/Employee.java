@@ -1,48 +1,49 @@
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class Employee {
-    Scanner scanner =new Scanner(System.in);
-   Employee (){
-       System.out.println("1.Create");
-       int menu=scanner.nextInt();
-       switch(menu){
-           case 1:
-               createemployee();
-               break;
-           case 5:
 
-               System.exit(0);
+    int empcode,salary,phonenumber;
+    String empname,designation,companyname,address,email;
 
+    public Employee(int empcode,String empname,String designation,int salary, String companyname,int phonenumber,String email,String address)
+    {
+        this.empcode =empcode;
+        this.empname = empname;
+        this.designation= designation;
+        this.salary =salary;
+        this.companyname = companyname;
+        this.phonenumber = phonenumber;
+        this.email = email;
+        this.address = address;
+    }
 
-       }
-   }
-   void createemployee(){
-       String empCode,empName,designation,salary,company,phoneNumber,email;
-       System.out.println("Employee Code");
-       empCode=scanner.next();
-       System.out.println("Employee Name");
-       empName=scanner.next();
-       System.out.println("Employee Designation");
-       designation= scanner.next();
-       System.out.println("Employee Salary");
-       salary= scanner.next();
-       System.out.println("Company");
-       company= scanner.next();
-       System.out.println("Employee Phone");
-       phoneNumber= scanner.next();
-       System.out.println("Employee Email");
-       email= scanner.next();
+    public int getEmpcode() {
+        return empcode;
+    }
 
+    public int getSalary() {
+        return salary;
+    }
 
+    public int getPhonenumber() {
+        return phonenumber;
+    }
 
+    public String getEmpname() {
+        return empname;
+    }
 
+    public String getDesignation() {
+        return designation;
+    }
 
-   }
-    public static void main(String[] args) {
+    public String getCompanyname() {
+        return companyname;
+    }
 
-       while(1>0){
-           ArrayList<Employee> employeeDetails =new ArrayList<Employee>();
-           employeeDetails.add(new Employee());       }
+    public String getAddress() {
+        return address;
+    }
+
+    public String getEmail() {
+        return email;
     }
 }
